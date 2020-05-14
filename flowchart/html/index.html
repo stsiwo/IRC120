@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <title>Flowchart Exercise</title>
+</head>
+<body>
+ <h1>Flowchart Exercise</h1>  
+
+ <h2>Flowchart 1</h2>
+ <h3>Average Calculation</h3>
+ <p>Please enter any numbers. I will calculate the average result automatically!!</p>
+ <div id="avg-inputs">
+   
+ </div>
+ <br>
+ <div id="avg-result-wrapper" class="avg-result">
+   <p>Result: <span id="avg-result-value"></span></p>
+ </div>
+ <button onclick="avgState.addNewEntry()">Add New Number</button>
+ <button onclick="avgState.cancel()">Cancel</button>
+ <br>
+
+ <h2>Flowchart 2</h2>
+ <h3>Fractional Calculation</h3>
+ <p>Please enter a number. I will calculate the fractional result automatically!!</p>
+ <label for="fn" >Number</label><br>
+ <input type="number" name="fn" id="fn-input" />
+ <br>
+ <div id="fn-result-wrapper" class="fn-result">
+   <p>Result: <span id="fn-result-value"></span></p>
+ </div>
+ <br>
+
+ <h2>Flowchart 3</h2>
+ <h3>Guess Game</h3>
+ <p>Guess Number. I will show the result automatically!!</p>
+ <label for="gn" >Number</label><br>
+ <input type="number" name="gn" id="gn-input" />
+ <br>
+ <div id="gn-result-wrapper" class="gn-result">
+   <p>Result: <span id="gn-result-value"></span></p>
+ </div>
+ <button onclick="guessGame.reset()">Reset</button>
+ <br>
+
+ <script src="../js/main.js"></script>
+</body>
+</html>
+
