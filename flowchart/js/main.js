@@ -1,13 +1,15 @@
 
 /**
- * Average 
+ * Average Calculation
  **/
 class AvgState {
 
   // properties
+  // current values
   values
 
   // constructor
+  // called when this class is instantiated
   constructor() {
     this.values = [
       0,
@@ -18,6 +20,8 @@ class AvgState {
   }
 
   // behaviors
+  
+  // called when user click 'Add New Number' 
   addNewEntry() {
 
     this.values.push(0)
@@ -26,6 +30,7 @@ class AvgState {
     this.displayResult()
   }
 
+  // render input elements in html
   render() {
 
     let wrapper = document.getElementById("avg-inputs")
@@ -39,6 +44,7 @@ class AvgState {
     }
   }
 
+  // render an input element (usually called by render())
   getAvgInput(id) {
 
     /**
@@ -86,12 +92,15 @@ class AvgState {
     return wrapper
   }
 
+  // input change event handler
+  // called when user update/change an input value
   changeValueHandler(event) {
     let id = event.target.getAttribute("id")
     let newValue = event.target.value
     this.updateValue(id, newValue)
   }
 
+  // update vlaues properties and calculate and display result
   updateValue(id, value) {
     console.log("update value function called")
     this.values[id] = value
@@ -99,6 +108,8 @@ class AvgState {
     this.displayResult()
   }
 
+  // remove click event handler
+  // called when user click remove button for a specific input
   removeHandler(event) {
     let id = event.target.getAttribute("data-index")
     console.log(id)
@@ -107,6 +118,7 @@ class AvgState {
     this.displayResult()
   }
 
+  // remove a value from 'values' properties
   remove(id) {
     console.log("remove method is called")
     this.values.splice(id, 1)
@@ -114,6 +126,7 @@ class AvgState {
     this.render()
   }
 
+  // display result
   displayResult() {
     let target = document.getElementById("avg-result-value")
     let result = this.calculateAvg()
@@ -124,6 +137,7 @@ class AvgState {
     }
   }
 
+  // calculate avg
   calculateAvg() {
     console.log("calculate avg func is called")
     let avg = 0;
@@ -135,6 +149,8 @@ class AvgState {
     return avg
   }
 
+  // cancel input elements and 'values' property
+  // called when user click 'Cancel' button
   cancel() {
     this.values = [
       0,
