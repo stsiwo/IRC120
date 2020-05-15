@@ -1,3 +1,7 @@
+/**
+ * events list reference: https://developer.mozilla.org/en-US/docs/Web/Events
+ **/
+
 
 /**
  * Average Calculation
