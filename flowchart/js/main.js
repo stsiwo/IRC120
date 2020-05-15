@@ -73,6 +73,11 @@ class AvgState {
     input.setAttribute("name", "num-" + id)
     input.setAttribute("class", "avg-num")
     input.value = this.values[id]
+    /**
+     * need binding
+     * 'this' keyword in any event handler refers to target element (not this 'Average' class)
+     * so when you need to refer 'Average' class inside the event handler, you need binding.
+     **/
     input.addEventListener("input", this.changeValueHandler.bind(this), false)
 
     // add autofocus for only first element
