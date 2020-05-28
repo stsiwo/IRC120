@@ -27,6 +27,8 @@ html {
   height: 75px;
 }
 
+
+
 .main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,8 +48,22 @@ html {
   position: sticky;
   -ms-flex-item-align: start;
       align-self: flex-start; /* need this if use with sticky & flexbox */
-  top: 100px;; /* also need this one */
+  top: 50px;; /* also need this one */
 
+}
+
+.aside-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.close-icon {
+  display: none;
+}
+
+.scroller {
+  /* overflow-x: auto; */
 }
 
 .aside-ul {
@@ -68,6 +84,32 @@ html {
 
 .aside-link {
   text-decoration: none;
+  color: #000;
+  border-bottom: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.aside-link:hover {
+  color: #EC2B49;
+}
+
+/* border bottom with animation 
+.aside-link:after {
+  display: block;
+  content: " ";
+  background-color: yellow;
+  border-bottom: solid 2px #EC2B49;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.aside-link:hover:after {
+  transform: scaleX(1); 
+}
+*/
+
+.body-content-title {
+   border-bottom: 2px solid #EC2B48;
 }
 
 table {
@@ -137,13 +179,27 @@ th, td {
     top: 0;
     height: 100%;
     background-color: #EC2B49;
-    z-index: 8000; /* must be smaller than left-nav-btn */
+    z-index: 9000; /* must be greater than left-nav-btn */
     width: 0;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
     overflow: hidden; /* prevent inner children element to remain when width: 0 */
     white-space: nowrap; /* prevent text collapse when open/close animation */
+
+    /* text */
+    color: #fff;
+  }
+
+  .close-icon {
+    display: block;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+
+  .aside-link {
+    color: #fff;
   }
 
   .aside-toggle-on {
@@ -161,7 +217,7 @@ th, td {
 
   .left-nav-btn {
     /* circle button style */
-    background-color: #EC2B49;
+    background-color: #EC2B49; /* itd color */
     border-radius: 25px;
     width: 50px;
     height: 50px;
@@ -193,7 +249,7 @@ th, td {
             align-items: center;
 
     cursor: pointer;
-    z-index: 9000; /* must be greater than aside */
+    z-index: 8000; /* must be less than aside */
   }
 
 }
