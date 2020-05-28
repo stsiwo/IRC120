@@ -84,4 +84,4 @@ function detectOutsideClickEventHandler(event) {
 }
 
 document.addEventListener("click", detectOutsideClickEventHandler)
-document.addEventListener("touch", detectOutsideClickEventHandler)
+document.addEventListener("touchstart", detectOutsideClickEventHandler)
