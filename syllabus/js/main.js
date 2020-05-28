@@ -79,10 +79,9 @@ function detectOutsideClickEventHandler(event) {
     
     // programatically call click event of close icon
     document.getElementById("left-nav-close-icon").dispatchEvent(new Event("click"));
-    // also touch for mobile
-    document.getElementById("left-nav-close-icon").dispatchEvent(new Event("touch"));
     return 
   }
 }
 
 document.addEventListener("click", detectOutsideClickEventHandler)
+document.addEventListener("touch", detectOutsideClickEventHandler)
