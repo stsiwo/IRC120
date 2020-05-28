@@ -1,0 +1,42 @@
+/* theme 1 */
+body {
+  color: #fff;
+}
+
+.intro-section {
+  background-color: #B8E298;
+  color: #1B3309;
+}
+
+.work-exp-1-section {
+  background-color: #9BD770;
+  color: #375F1B;
+}
+
+.work-exp-2-section {
+  background-color: #65AD31;
+}
+
+.skills-section {
+  background-color: #375F1B;
+  color: #9BD770;
+}
+
+.education-section {
+  background-color: #1B3309;
+  color: #B8E298;
+}
+
+.title1 {
+  color: green;
+}
+
+.title2 {
+  color: purple;
+}
+
+.title3 {
+  color: red;
+}
+
+

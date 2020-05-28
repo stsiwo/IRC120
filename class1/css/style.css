@@ -1,0 +1,101 @@
+body {
+}
+
+.content {
+}
+
+.section {
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+@media only screen and (min-width: 600px) {
+  .section {
+    padding: 0 50px;
+  }
+}
+
+.section-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.intro-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.ratio-container {
+  text-align: center;
+}
+
+.intro-img {
+  border-radius: 20px;
+  box-shadow: grey 2px 2px 2px;
+  box-sizing: border-box;
+  width: 80%;
+}
+
+.ex-company-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.responsibility-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.responsibility-item {
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.theme-btn {
+  /* circle button style */
+  background-color: #000;
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  box-shadow: grey 2px 2px 2px;
+
+  margin: 10px;
+
+  /* position */
+  position: fixed;
+  right: 5px;
+  bottom: 5px; /* must match with js 'main.js' at line 26 */
+
+  transition: all .5s;
+
+  cursor: pointer;
+
+  /* inner letter style */
+  color: #fff;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* must be below '.theme-toggle-btn' */
+  z-index: 8999;
+}
+
+.theme-toggle-btn {
+  /* must be above '.theme-btn' */
+  z-index: 9000;
+
+  /* center icon */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/**
+.theme-toggle-btn:hover + .theme-btn-1 {
+  bottom: 60px;
+}
+**/
