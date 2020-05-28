@@ -37,3 +37,20 @@ for (let i = 0; i < linkList.length; i ++) {
   linkList[i].addEventListener("click", toggleLeftNavOpenClickEventHandler)
 }
 
+/**
+ * scroll smooth feature (esp for mobile browser)
+ *  - polyfil does not work. I don't know why
+ **/
+function scrollSmoothToDes(event) {
+  let destId = event.target.href.substring(event.target.href.indexOf("#")+1) 
+  console.log(destId)
+  let targetEl = document.getElementById(destId)
+  targetEl.scrollIntoView({
+    behavior: "smooth", 
+  })
+}
+
+
+for (let i = 0; i < linkList.length; i ++) {
+  linkList[i].addEventListener("click", scrollSmoothToDes)
+}
