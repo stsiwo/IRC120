@@ -246,6 +246,14 @@ nav ul li a {
 
           box-sizing: border-box;
   margin: 50px 0;
+
+  /**
+   * aos overflow issue workaround!!
+   *  - this issue cause overflow the element to right side
+   *  - workaround is to use below
+   *  - ref: https://github.com/michalsnik/aos/issues/227
+   **/
+  overflow-x: hidden;
 }
 
 .reverse-color {
