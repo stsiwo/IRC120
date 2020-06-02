@@ -17,7 +17,7 @@ input, button, submit { border:none; }
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 20px 30px;
-  color: #BBDFFA;
+  color: #fff;
   border-radius: 30px;
   -webkit-box-shadow: grey 2px 2px 2px;
           box-shadow: grey 2px 2px 2px;
@@ -30,18 +30,18 @@ input, button, submit { border:none; }
 }
 
 .btn a {
-  color: #BBDFFA;
+  color: #fff;
   text-decoration: none;
 }
 
 .btn:hover, .btn:hover a {
   color: #2C43B8;
-  background-color: #BBDFFA;
+  background-color: #fff;
 }
 
 .btn-white {
   color: #2C43B8;
-  background-color: #BBDFFA;
+  background-color: #fff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 20px 30px;
@@ -57,13 +57,13 @@ input, button, submit { border:none; }
 
 .btn-white a {
   color: #2C43B8;
-  background-color: #BBDFFA;
+  background-color: #fff;
   text-decoration: none;
 }
 
 .btn-white:hover, .btn-white:hover a{
   background-color: #2C43B8;
-  color: #BBDFFA;
+  color: #fff;
 }
 
 .reset-ul {
