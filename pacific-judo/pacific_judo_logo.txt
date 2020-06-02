@@ -1,0 +1,27 @@
+logo design:
+	- contrast
+	- simple
+		- don't put detailed structure or shape into logo
+	- color
+		- research client
+		- avoid mixing a lot of colors
+		- research meaning of color
+	- literal vs figurative
+		- don't use common words for logo (make to difficult memorable)
+		- logo could be abstract or symbol and must be unique (not concrete)
+
+
+Name: Pacific Judo
+colors:
+	- blue
+	- white
+
+font: 
+	- bebas neue
+
+symbol:
+	- belt
+	- japanese judo kanji
+	- judogi
+	
+	

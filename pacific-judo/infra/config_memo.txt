@@ -1,0 +1,27 @@
+/**
+ * installation guide
+ **/
+ref: https://ampps.com/wiki/Installing_AMPPS_on_Linux
+
+/**
+ * trouble shooting
+ **/
+1. first time run at ubuntu causes: X Error: BadAccess (attempt to access private resource denied) 10
+  - use env var and run it (e.g., sudo QT_X11_NO_MITSHM=1 /usr/local/ampps/Ampps)
+  - ref: https://askubuntu.com/questions/1063000/ampps-first-run-errors-control-panel-blank
+
+2. apache does not start when running ampps: 
+  - another web server might be running and dominate port 80 so stop it.
+  - ref: https://stackoverflow.com/questions/47013891/apache-doesnt-start-in-ampps-on-ubuntu
+
+  - if appach still not starting after try above, you need to install other dependencies. try below:
+  `
+    sudo cd /usr/local/ampps/apache/lib
+
+    sudo mkdir bck
+
+    sudo mv ./libapr* ./bck/
+
+    sudo apt-get -y install libaprutil1 libaprutil1-dev libapr1 libapr1-dev 
+  `
+  - ref: https://www.softaculous.com/board/index.php?tid=13513
